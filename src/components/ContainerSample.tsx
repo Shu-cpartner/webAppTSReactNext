@@ -1,7 +1,13 @@
 import React from "react";
 
+// Containerのpropsの型を定義
+type ContainerProps = {
+    title: string
+    children: React.ReactNode
+}
+
 // Containerは赤背景のボックスの中にタイトルと子要素を表示
-const Container = (props: { title: string; children: React.ReactElement }) => {
+const Container = (props: ContainerProps): JSX.Element => {
     const { title, children } = props
 
     return (
